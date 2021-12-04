@@ -1,0 +1,134 @@
+@import './ant-design.less';
+
+// 字体定义
+@font-face {
+  font-family: 'siyuan';
+  /* 思源黑体-Regular */
+  src: url('../font/SourceHanSansCN-Regular.ttf');
+}
+@font-face {
+  font-family: 'siyuanBold';
+  /* 思源黑体-Bold */
+  src: url('../font/SourceHanSansCN-Bold.ttf');
+}
+
+/** 全局样式 */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: #color[bg-color];
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  // font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+  //   Microsoft YaHei, Arial, sans-serif;
+}
+
+#app {
+  height: 100%;
+  font-size: #font[base-font-size];
+  font-family: #font[base-font-family];
+}
+
+/** 公共样式 */
+.dtm-no-padding {
+  padding: 0px;
+}
+.dtm-no-margin {
+  margin: 0px;
+}
+
+.dtm-mr {
+  margin-right: 10px;
+}
+.dtm-must::before {
+  content: '*';
+  color: red;
+  margin-right: 8px;
+}
+.dtm-center {
+  text-align: center;
+}
+
+// 查询按钮组
+.dtm-query-btns {
+  #button.space();
+}
+
+// 表格上方按钮组
+.dtm-content-btns {
+  margin: 10px 20px;
+  #button.space();
+  font-family: siyuanBold;
+  > button.ant-btn-link {
+    &:hover {
+      background-color: #color[primary-hover];
+      color: #color[primary-text-hover];
+    }
+    > svg {
+      margin-right: 8px;
+    }
+  }
+}
+
+// 表格内按钮样式
+.dtm-btns {
+  > svg {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+    &:hover {
+      color: #color[primary];
+    }
+  }
+}
+
+.dtm-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.dtm-table {
+  width: 100%;
+  th,
+  td {
+    padding: 16px;
+    border-bottom: #border[default];
+  }
+  th {
+    font-family: #font[base-font-family-blod];
+    background: #color[table-th-bg];
+    &:not(:last-child) {
+      border-right: #border[default];
+    }
+  }
+  tr {
+    // 偶数行
+    &:nth-child(even) {
+      background: #color[table-tr-even-bg];
+    }
+    // 奇数行
+    // &:nth-child(odd) {
+    //   background: #color[table-tr-odd-bg];
+    // }
+    // &:hover {
+    //   background: #color[table-tr-hover-bg];
+    // }
+    // &:active {
+    //   background: #color[table-tr-active-bg];
+    // }
+  }
+}
+
+.dtm-optional-table-row{
+  .ant-table tbody.ant-table-tbody>tr{
+    cursor: pointer;
+  }
+}

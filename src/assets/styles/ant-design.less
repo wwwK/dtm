@@ -1,0 +1,90 @@
+// 引入官方提供的 less 样式入口文件
+@import '~ant-design-vue/dist/antd.less';
+
+// ant-design样式覆盖
+@primary-color: #color[primary]; // 全局主色
+@success-color: #color[success]; // 成功色
+@warning-color: #color[warning]; // 警告色
+@error-color: #color[error]; // 错误色
+// @link-color: #1890ff; // 链接色
+@font-size-base: #font[base-font-size]; // 主字号
+// @heading-color: rgba(0, 0, 0, 0.85); // 标题色
+// @text-color: rgba(0, 0, 0, 0.65); // 主文本色
+// @text-color-secondary: rgba(0, 0, 0, 0.45); // 次文本色
+// @disabled-color: rgba(0, 0, 0, 0.25); // 失效色
+// @border-radius-base: 4px; // 组件/浮层圆角
+@border-color-base: #color[border-color]; // 边框色
+// @box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15); // 浮层阴影
+
+// 菜单背景颜色
+@menu-dark-bg: #color[menu-bg];
+// 子菜单背景颜色
+@menu-dark-submenu-bg: #color[menu-submenu-bg];
+// 菜单项选中颜色
+@menu-dark-item-active-bg: #color[menu-item-active-bg];
+// 菜单项鼠标指向颜色
+@menu-dark-item-hover-bg: #color[menu-item-hover-bg];
+// 菜单文字颜色
+@menu-dark-color: #color[menu-font-color];
+// 菜单文字大小
+@menu-item-font-size: 12px;
+// 菜单项高度
+@menu-item-height: 44px;
+@menu-inline-toplevel-item-height: @menu-item-height;
+// 菜单项margin-top
+@menu-item-vertical-margin: 0px;
+// 菜单项margin-bottom
+@menu-item-boundary-margin: 0px;
+// 菜单折叠宽度
+@menu-collapsed-width: 68px;
+
+// tabs文字大小
+@tabs-title-font-size: 12px;
+// 边框圆角
+@border-radius-base: 4px;
+
+// 覆盖表格样式
+.ant-table {
+  // 表头
+  .ant-table-thead > tr > th {
+    font-family: #font[base-font-family-blod];
+    background: #color[table-th-bg];
+  }
+  .ant-table-tbody {
+    > tr {
+      // 偶数行背景色
+      &:nth-child(even) {
+        background: #color[table-tr-even-bg];
+      }
+      // 鼠标悬停行背景色
+      // &.ant-table-row:hover > td {
+      //   background: #color[table-tr-hover-bg];
+      // }
+      &.ant-table-row:hover:nth-child(odd):not(.ant-table-row-selected) > td {
+        background: #color[table-tr-hover-bg];
+      }
+      // 选中行背景色
+      &.ant-table-row-selected > td {
+        background: #color[table-tr-active-bg];
+      }
+    }
+  }
+}
+.ant-modal-content {
+  > .ant-modal-header > .ant-modal-title {
+    font-family: #font[base-font-family-blod];
+  }
+  > .ant-modal-body
+    > form.ant-form.edit-form
+    > .ant-form-item
+    > .ant-form-item-control {
+    .ant-input-number {
+      width: 100%;
+    }
+  }
+}
+// 多选框边框颜色
+.ant-checkbox-inner,
+.ant-radio-inner {
+  border-color: #d9d9d9;
+}

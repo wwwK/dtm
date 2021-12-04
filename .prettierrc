@@ -1,0 +1,8 @@
+{
+  "singleQuote": true,
+  "trailingComma": "none",
+  "proseWrap": "always",
+  "arrowParens": "avoid",
+  "htmlWhitespaceSensitivity": "ignore",
+  "noImplicitAny": false
+}

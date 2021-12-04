@@ -1,0 +1,91 @@
+/**
+  * 存放less变量等公共信息
+  * 在需要的文件中可以直接使用变量信息，不需要引入当前文件，这个工作已经交给'style-resources-loader'插件了
+  */
+
+/** 公共变量 */
+#common() {
+}
+
+/** 颜色 */
+#color() {
+  primary: #387beb; /** 主色 */
+  primary-hover: #e3eeff; /** 悬停主色 */
+  primary-text-hover: #2467d7; /** 文字悬停主色 */
+  primary-text-active: #4c8fff; /** 文字按下主色 */
+  // secondary: ; /** 次色 */
+  success: #74cf6f; /** 成功色 */
+  error: #ec4d3d; /** 错误色 */
+  warning: #f09837; /** 警告色 */
+
+  /** 系统背景色 */
+  bg-color: #f1f1f1;
+  /** 系统顶部背景色 */
+  top-bg-color: #1f1f1f;
+  /** 系统顶部文字颜色 */
+  top-font-color: white;
+
+  /** 菜单背景色 */
+  menu-bg: #353535;
+  /** 子菜单背景颜色 */
+  menu-submenu-bg: #353535;
+  /** 菜单项颜色 */
+  menu-item-bg: #2d2d2d;
+  /** 菜单项选中颜色 */
+  menu-item-active-bg: #555555;
+  /** 菜单项鼠标指向颜色 */
+  menu-item-hover-bg: $menu-item-active-bg;
+  /** 菜单文字颜色 */
+  menu-font-color: white;
+  /** 菜单边框颜色 */
+  menu-border-color: #e9e9e9;
+
+  /** 边框颜色 */
+  border-color: #f0f0f0;
+
+  /** 表格颜色 */
+  /** 表格表头背景色 */
+  table-th-bg: #f6f6f6;
+  /** 表格奇数行背景色 */
+  table-tr-odd-bg: white;
+  /** 表格偶数行背景色 */
+  table-tr-even-bg: #f9f9f9;
+  /** 表格鼠标指向行背景色 */
+  table-tr-hover-bg: white;
+  /** 表格选中行背景色 */
+  table-tr-active-bg: $primary-hover;
+}
+
+/** 字体 */
+#font() {
+  /** 基础文字大小 */
+  base-font-size: 14px;
+  /** 基础文字字体 */
+  base-font-family: siyuan;
+  /** 基础文字字体-加粗 */
+  base-font-family-blod: siyuanBold;
+}
+
+/** 边框 */
+#border() {
+  /** 默认边框样式 */
+  default: 1px solid #color[border-color];
+  .radius(@radius) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+  }
+}
+
+/** 按钮 */
+#button() {
+  /** 按钮跟按钮之间的间距 */
+  space: 10px;
+  /** 按钮间距样式定义 */
+  .space() {
+    > button:not(:last-child) {
+      margin-right: #button[space];
+    }
+  }
+}
+
